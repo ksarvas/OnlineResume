@@ -1,0 +1,327 @@
+/* ------ GENERAL ------ */
+
+body,
+aside,
+section,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #3b464c;
+}
+
+.clear-fix {
+  overflow: auto;
+}
+
+#about,
+#contact,
+#skills,
+#workExperience,
+#projects,
+#education {
+  padding: 0 5%;
+}
+
+h1 {
+  font-size: 40px;
+  color: #f5a623;
+  line-height: 48px;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #999;
+  line-height: 29px;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 20px;
+  color: #999;
+  line-height: 22px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 26px;
+  color: #999;
+  line-height: 16px;
+  text-align: center;
+}
+
+h2,
+h3,
+h4 {
+  padding: 10px 0;
+}
+
+p {
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+  padding: 10px 0;
+}
+
+a {
+  color: #1199c3;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.orange {
+  background-color: #f5ae23;
+}
+
+.orange-text {
+  color: #f5ae23;
+}
+
+.white-text {
+  font-weight: bold;
+  color: #fff;
+}
+
+aside {
+  padding-bottom: 5%;
+}
+
+aside h3 {
+  color: #f5ae23;
+  font-weight: 500;
+}
+
+section {
+  background-color: #f3f3f3;
+  padding: 10px 0;
+}
+
+.dark-gray {
+  background-color: #4a4a4a;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+span {
+  padding: 5px 8px 5px 2px;
+}
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: left;
+  padding-right: 20px;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+}
+
+.work-entry,
+.education-entry,
+.course-entry {
+  margin: 10px 0;
+}
+
+/* ------ HEADER ------ */
+
+#header {
+  background-color: #293237;
+  padding: 2% 0;
+  margin-bottom: 4%;
+}
+
+#header-pic {
+  text-align: center;
+  padding-top: 4%;
+}
+
+#header-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+/* ------ ABOUT ME ------ */
+
+#about-p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 21px;
+}
+
+/* ------ CONTACT ME ------ */
+
+
+/* ------ SKILLS ------ */
+
+
+/* ------ WORK EXPERIENCE ------ */
+
+
+/* ------ PROJECTS ------ */
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#projects h2 {
+  width: 100%;
+  padding-left: 0;
+}
+
+#projects .date-text {
+  float: none;
+}
+
+#projects img {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 40px 10px 0;
+}
+
+/* ------ EDUCATION ------ */
+
+.course-entry {
+  padding-bottom: 4px;
+}
+
+/* ------ MAP ------ */
+
+#locations {
+  float: left;
+  width: 100%;
+  min-height: 480px;
+  background-color: #293237;
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* ------ LET'S CONNECT ------ */
+
+footer {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+#footerContacts {
+  display: -webkit-flex;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+/* ------ MEDIA QUERIES ------ */
+
+@media only screen and (max-width: 400px) {
+  
+  #projects img {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 401px) {
+
+  #projects {
+    padding: 0 0 0 5%;
+  }
+  
+  .project-entry {
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  
+  aside {
+    width: 40%;
+    float: left;
+  }
+  
+  section {
+    float: right;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  aside {
+    width: 35%;
+  }
+  
+  section {
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  
+  aside {
+    width: 30%;
+  }
+  
+  section {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  
+  aside {
+    width: 25%;
+  }
+  
+  section {
+    width: 75%;
+  }
+}
