@@ -2,7 +2,7 @@
 
 ## Comments for Reviewer
 
-* I mostly wanted to make a Responsive Online Resume with a very different format from the original. I plan on adjusting some of the styling, colors, adding icons, and even skill progress bars as I continue along with the Nanodegree. Please let me know if you have any suggestions regarding this or just in general.
+* I mostly wanted to make a Responsive Online Resume with a very different format from the original. I plan on adjusting some of the styling, colors, adding icons, and even adding skill progress bars as I continue along with the Nanodegree. Please let me know if you have any suggestions regarding this or just in general.
 
 * I wanted to change the "welcomeMessage" into an About Me section instead, so I changed that a bit. I know the rubric stated to match the schema exactly, but I was hoping this change was acceptable?
 
