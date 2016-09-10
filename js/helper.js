@@ -2,6 +2,8 @@ var HTMLheaderPic = '<div id="header-pic"><img src="%data%"></div>';
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<h4>%data%</h4>';
 
+var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+
 var HTMLaboutStart = '<h3>About Me</h3>';
 var HTMLabout = '<p id="about-p">%data%</p>';
 

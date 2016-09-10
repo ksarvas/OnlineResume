@@ -8,16 +8,17 @@ var bio = {
     "twitter": "@ksarvas",
     "location": "Chicago, IL"
   },
+  "welcomeMessage": "Welcome to my Online Resume. Check back soon for more updates",
   "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
   "skills": [
     "Adobe Photoshop", "Web Design", "Maya", "ZBrush", "Game Development"
   ],
-  "bioPic": "images/fry.jpg"
+  "biopic": "images/fry.jpg"
 };
 
 bio.display = function() {
 
-  var formattedHeaderPic = HTMLheaderPic.replace("%data%", bio.bioPic);
+  var formattedHeaderPic = HTMLheaderPic.replace("%data%", bio.biopic);
   $("#header").append(formattedHeaderPic);
 
   var formattedHeaderName = HTMLheaderName.replace("%data%", bio.name);
@@ -25,6 +26,9 @@ bio.display = function() {
 
   var formattedHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
   $("#header").append(formattedHeaderRole);
+  
+  var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+  $("#welcome").append(formattedWelcomeMsg);
 
   $("#about").append(HTMLaboutStart);
 
@@ -50,8 +54,7 @@ bio.display = function() {
   $("#footerContacts").append(formattedTwitter);
 
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-  $("#topContacts").append(formattedLocation);
-  $("#footerContacts").append(formattedLocation);
+  $("#topContacts, #footerContacts").append(formattedLocation);
 
   $("#skills").append(HTMLskillsStart);
 
@@ -171,35 +174,35 @@ var education = {
     "degree": "Certificate Program",
     "dates": "2017 - 2019",
     "location": "Hollywood, CA",
-    "major": "Visual Effects Animation",
+    "majors": [ "Visual Effects Animation" ],
     "url": "http://www.gnomon.edu"
   }, {
     "name": "Rhode Island School of Design",
     "degree": "BFA",
     "dates": "2007 - 2011",
     "location": "Providence, RI",
-    "major": "Illustration",
+    "majors": [ "Illustration" ],
     "url": "http://www.risd.edu"
   }],
   "onlineCourses": [{
     "title": "Intro to Environment Art",
     "school": "CGMA",
-    "dates": 2016,
+    "dates": "2016",
     "url": "http://www.cgma.com"
   }, {
     "title": "FE Web Development Nanodegree",
     "school": "Udacity",
-    "dates": 2016,
+    "dates": "2016",
     "url": "http://www.udacity.com"
   }, {
     "title": "Look Development and Image Based Lighting Fundamentals",
     "school": "CGWorkshops",
-    "dates": 2015,
+    "dates": "2015",
     "url": "http://www.cgworkshops.com"
   }, {
     "title": "Hard Surface Modeling",
     "school": "Gnomon School of Visual Effects",
-    "dates": 2014,
+    "dates": "2014",
     "url": "http://www.gnomon.edu"
   }]
 };
@@ -222,9 +225,13 @@ education.display = function() {
 
     var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
     $(".education-entry:last").append(formattedSchoolLocation);
-
-    var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", school.major);
-    $(".education-entry:last").append(formattedSchoolMajor);
+    
+    school.majors.forEach(function(major) {
+      
+      var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", major);
+      $(".education-entry:last").append(formattedSchoolMajor);
+      
+    });
     
     // TODO: Figure out how to append URL value in the A tag HREF
 
